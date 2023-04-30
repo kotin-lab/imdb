@@ -5,6 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 // Components
 import Header from '@/components/Header';
+import Providers from './Providers';
 
 export const metadata = {
   title: 'IMDb Clone',
@@ -15,14 +16,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* Header */}
-        <Header />
+        <Providers>
+          {/* Header */}
+          <Header />
 
-        {/* Navbar */}
+          {/* Navbar */}
 
-        {/* SearchBox */}
+          {/* SearchBox */}
 
-        {children}
+          {children}
+        </Providers>
       </body>
     </html>
   )
