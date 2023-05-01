@@ -5,7 +5,7 @@ const API_KEY = process.env.API_KEY;
 export default async function Home({searchParams}) {
   let genre = searchParams.genre || 'fetchTranding';
   genre = genre === 'fetchTopRated' ? 'movie/top_rated' : 'trending/all/week';
-  const apiUrl = `https://api.themoviedb.org/3/${genre}?api_key=${API_KEY}&language=en-US&page=1`;
+  const apiUrl = `https://api.themoviedb.org/3/${genre}?api_key=a${API_KEY}&language=en-US&page=1`;
   
   const res = await fetch(apiUrl, {
     next: {
@@ -21,7 +21,7 @@ export default async function Home({searchParams}) {
 
   const data = await res.json();
   const results = data.results;
-  
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Results results={results} />
