@@ -23,7 +23,7 @@ export default async function Home({searchParams}) {
   const results = data.results;
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main>
       <Results results={results} />
     </main>
   )
