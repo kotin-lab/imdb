@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 import Header from '@/components/Header';
 import Providers from './Providers';
 import Navbar from '@/components/Navbar';
+import SearchBox from '@/components/SearchBox';
 
 export const metadata = {
   title: 'IMDb Clone',
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
           <Navbar />
 
           {/* SearchBox */}
+          <SearchBox />
 
           {children}
         </Providers>
